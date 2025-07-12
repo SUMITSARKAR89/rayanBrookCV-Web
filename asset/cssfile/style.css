@@ -273,7 +273,7 @@
     }
 
     .content {
-      height: 500vh; /* Long scrollable content */
+      height: 1200vh; /* Long scrollable content */
       padding: 100px;
       background: rgb(0,0,0, 0.1);
     }
@@ -505,13 +505,17 @@
 
 
     /* ============================summary============================  */
-    #summary{
+    #summary,
+    #exprience,
+    #skill{
       margin-top: 15%;
       margin-bottom: 3%;
       position: relative;
     }
 
-    #summary h2{
+    #summary h2,
+    #exprience h2,
+    #skill h2{
       margin-top: 8%;
       padding-bottom: 3%;
       color: var(--btn-bg);
@@ -563,6 +567,259 @@
       }
       
     }
+
+    /* ============================exprience============================  */
+    .exprience-main-container{
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .exprience-content{
+      max-width: 100%;
+      height: auto;
+      position: relative;
+      margin-top: 20px;
+     
+    }
+    .exprience-content::before{
+      position: absolute;
+      content: '';
+      width: 10px;
+      height: 10px;
+      top: 25px;
+      left: 0;
+      background: var(--btn-bg);
+      border-radius: 50%;
+    }
+    .exprience-content::after{
+      position: absolute;
+      content: '';
+      width: 1px;
+      top: 45px;
+      left: 5px;
+      height: 100%;
+      opacity: 0.5;
+      background: var(--text-color-wht);
+    }
+    .exprience-title{
+      padding: 10px 25px;
+      max-width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      gap: 160px;
+      align-items:center;  
+      width: fit-content;
+
+    }
+    .expreince-head{
+      max-width: 100%;
+    }
+    .expreince-head h4{
+      text-transform: uppercase;
+      color: var(--text-color-wht);
+      font-weight: 700;
+    }
+     .expreince-head .ex-h4{
+      color: var(--btn-bg);
+     }
+    .expreince-head p{
+      color: var(--btn-bg);
+      margin-top: 10px;
+    }
+    .expreince-head .ex-p{
+      color: var(--text-color-wht);
+    }
+    .exprience-title span{
+      font-weight: 700;
+      color: var(--text-color-wht);
+      
+    }
+    .exprience-title .ex-span{
+      color: var(--btn-bg);
+    }
+    .exprience-content .font-18{
+       padding: 10px 25px;
+      max-width: 100%;
+      width: 60%;
+      margin: 3% 0;
+      line-height: 28px;
+
+
+    }
+    .exprience-project{
+       padding: 10px 25px;
+       max-width: 100%;
+       width: 60%;
+    }
+    .exprience-project .font-16{
+      color: var(--btn-bg);
+      font-weight: 700;
+
+    }
+    .exprience-container{
+      padding: 10px 25px;
+      max-width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 65%;
+      gap: 25px;
+      position: relative;
+      
+    }
+    .exprience-container .exprience-card{
+      width: 100%;
+      height: 250px;
+      position: relative;
+      border-radius: 15px;
+      transition: var(--transition-1);
+      border: 1px solid #6d6a6a9a;
+      overflow: hidden;
+      
+    }
+    .exprience-card:hover{
+      box-shadow: rgba(85, 83, 83, 0.35) 0px 5px 15px;
+    }
+    .exprience-card img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+      position: relative;
+      cursor: pointer;
+      transition: var(--transition-1);
+      transform: scale(1);
+      
+     
+      
+    }
+    .exprience-card:hover img{
+      transform: scale(1.1);
+    }
+    
+    .exprience-card .ex-icon{
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 1;
+      transform: rotate(-45deg);
+      transition: var(--transition-2);
+      
+      margin-top: -10px;
+      margin-right: -10px;
+      color: var(--text-color-wht);
+      opacity: 0.8;
+      
+    }
+    .exprience-card:hover .ex-icon{
+      margin: 0;
+      color: var(--btn-bg);
+      opacity: 1;
+
+    }
+    .exprience-card-info{
+      position: absolute;
+      bottom: 0;
+      left: 0px;
+      width: 100%;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-end;
+     padding: 20px 0px;
+      
+    }
+    .exprience-card:hover .exprience-card-info::before{
+      background: linear-gradient(to top, #0000001c, #0002050a);
+
+    }
+    .exprience-card-info::before{
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, #0000005b, #00020523);
+      transition: var(--transition-1);
+      border-radius: 15px;
+    }
+    .exprience-card-info span{
+      color: #fff;
+      font-weight: 700;
+      font-size: var(--font-20);
+      padding: 0 10px;
+      z-index: 2;
+    }
+    .exprience-card-info p{
+      font-weight: 500;
+      margin-top: 5px;
+      color: #fff;
+      transform: scale(0.9);
+      z-index: 2;
+      
+    }
+
+    .exprience-list{
+      max-width: 100%;
+      width: 65%;
+      padding: 10px 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-top: 15px;
+    }
+    .exprience-list li{
+      max-width: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 5px;
+      margin: 5px 0;
+    }
+    .exprience-list li span{
+      color: var(--btn-bg);
+      
+    }
+    .exprience-list p{
+      line-height: 25px;
+    }
+    
+
+/* ============================skills============================  */
+.skill-container{
+  max-width: 100%;
+  width: 65%;
+  padding: 10px 15px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  transition: var(--transition-1)
+}
+.skill-container .skill-card{
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  transition: var(--transition-1)
+}
+.skill-card span{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--btn-bg);
+}
+.skill-card  p{
+  text-transform: capitalize;
+  font-weight: 600;
+  color: var(--text-color-wht);
+}
 
 
 
@@ -720,6 +977,20 @@ footer{
    section{
      margin: 0% 5% 3%;
     }
+    .skill-container{
+      width: 80%;
+    }
+
+}
+  
+@media(max-width:1192px){
+    .download{
+      width: 15%;
+    }
+    .exprience-container{
+      width: 80%;
+    }
+
 
 }
 @media(max-width:1024px){
@@ -730,13 +1001,9 @@ footer{
      .menu li a{
       padding: 12px 25px;
      }
-}  
-@media(max-width:1192px){
-    .download{
-      width: 15%;
+     .exprience-container{
+      width: 100%;
     }
-
-
 }
 @media(max-width:980px){
     #toggle{
@@ -756,11 +1023,63 @@ footer{
     section{
      margin: 0% 4% 3%;
     }
+    #summary p,
+  .summary-info,
+  .exprience-list{
+    width: 80%;
+    transition: var(--transition-1);
+  }
+  .exprience-title{
+    gap: 25px;
+    flex-direction: column;
+  }
+  .exprience-title span{
+    text-align: left;
+    width: 100%;
+    
+  } 
+  .exprience-content .font-18,
+  .exprience-project{
+    width: 80%;
+  }
+  .exprience-container{
+      width: 100%;
+      grid-template-columns: 1fr;
+    }
+    .exprience-container .exprience-card{
+    height: 300px;
+  }
+  .exprience-card .ex-icon{
+    top: 30px;
+    right: 30px;
+
+  } .exprience-card-info p{
+    margin-left: -10px;
+  }
+   .exprience-card-info span{
+    padding-left: 15px;
+   }
+   .skill-container{
+      width: 100%;
+    }
 }
 @media(max-width:768px){
    section{
      margin: 0% 2% 3%;
     }
+    #summary p,
+  .summary-info,
+  .exprience-content .font-18,
+  .exprience-project,
+  .exprience-list{
+    width: 100%;
+    transition: var(--transition-1);
+  }
+  .skill-container{
+    grid-template-columns: 1fr;
+  }
+  
+  
 
 }
 @media(max-width:600px){
