@@ -66,3 +66,26 @@ sun.addEventListener('click', () => {
  
   
 });
+
+
+
+
+// =============================navigation======================= 
+  window.addEventListener("scroll", () =>{
+    const sectionsContent = document.querySelectorAll(".sectionContent");
+    const scrollY = window.pageYOffset; 
+
+    sectionsContent.forEach((section) => {
+      const sectionHeight = section.offsetHeight;
+      const sectionTop = section.offsetTop - 60;
+      const sectionId = section.getAttribute("id");
+
+      const menuItem = document.querySelector(`header nav .menu .menu-item a[href*="${sectionId}"]`);
+
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        menuItem.classList.add("current");
+      } else {
+        menuItem.classList.remove("current");
+      }
+    })
+})
